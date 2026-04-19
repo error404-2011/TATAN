@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TATAN Project</title>
+
+<style>
+body{
+  margin:0;
+  background:#000;
+  color:#fff;
+  font-family:monospace;
+  overflow:hidden;
+}
+
+#matrixCanvas,#snowCanvas{
+  position:fixed;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+}
+
+.app{
+  position:relative;
+  z-index:2;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:18px;
+}
+
+.profile{
+  margin-top:20px;
+  text-align:center;
+}
+
+.avatar{
+  width:110px;
+  height:110px;
+  border-radius:50%;
+  overflow:hidden;
+  border:3px solid #00eaff;
+  box-shadow:0 0 20px #00eaff;
+  margin:0 auto 12px;
+}
+
+.avatar img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.title{
+  font-size:22px;
+  font-weight:bold;
+  color:#00eaff;
+  text-shadow:0 0 12px #00eaff;
+}
+
+.subtitle{
+  color:#9df7ff;
+  font-size:14px;
+  margin-top:4px;
+}
+
+.list{
+  margin-top:20px;
+  width:100%;
+  max-width:600px;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+.card{
+  background:#001420;
+  color:#00eaff;
+  padding:12px;
+  border-radius:10px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  cursor:pointer;
+  font-weight:bold;
+  border:1px solid #00eaff;
+  box-shadow:0 0 15px #00eaff;
+}
+
+.mini{
+  width:50px;
+  height:50px;
+  background:#000;
+  color:#00eaff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:8px;
+  border:1px solid #00eaff;
+}
+
+.text{
+  flex:1;
+}
+
+#produkPage{
+  position:fixed;
+  inset:0;
+  z-index:5;
+  background:#000;
+  color:#00eaff;
+  font-family:monospace;
+  overflow-y:auto;
+  display:none;
+  padding:20px;
+  white-space:pre-wrap;
+}
+
+#produkPage h2{
+  text-align:center;
+  text-shadow:0 0 10px #00eaff;
+}
+
+.closeBtn{
+  display:block;
+  margin:20px auto;
+  padding:8px 16px;
+  background:#00eaff;
+  color:#000;
+  border:0;
+  border-radius:6px;
+  font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<canvas id="matrixCanvas"></canvas>
+<canvas id="snowCanvas"></canvas>
+
+<div class="running-text">
+✨ ada di channel WhatsApp sama grup WhatsApp ✨ jangan lupa follow TikTok ini ya ✨
+</div>
+
+<div class="app" id="mainPage">
+
+<div class="profile">
+<div class="avatar">
+<img src="https://j.top4top.io/p_3760ldodn0.jpg" alt="Profil">
+</div>
+
+<div class="title">TATAN SLEBEW</div>
+
+<div class="subtitle">
+yang mau buy produk tatan<br>
+silakan sering promo ko produk kita
+</div>
+</div>
+
+<div class="list">
+
+<div class="card" onclick="showProduk()">
+<div class="mini">PD</div>
+<div class="text">𝗣𝗥𝗢𝗗𝗨𝗞 𝗢𝗪𝗡𝗘𝗥</div>
+</div>
+
+<div class="card" onclick="location.href='https://wa.me/6285776032566'">
+<div class="mini">NM</div>
+<div class="text">𝗪𝗛𝗔𝗧𝗦𝗔𝗣𝗣</div>
+</div>
+
+<div class="card" onclick="location.href='https://www.instagram.com/tatanbyft?igsh=aTV4eXZuMXFqOHNv'">
+<div class="mini">IG</div>
+<div class="text">𝗜𝗡𝗦𝗧𝗔𝗚𝗥𝗔𝗠</div>
+</div>
+
+<div class="card" onclick="location.href='https://chat.whatsapp.com/IuIXdKgVf4pCuBynFrnAPr?mode=gi_t'">
+<div class="mini">GB</div>
+<div class="text">𝗚𝗥𝗨𝗕 𝗪𝗛𝗔𝗧𝗦𝗔𝗣𝗣</div>
+</div>
+
+<div class="card" onclick="location.href='https://whatsapp.com/channel/0029Vb7hDGEA2pL5j5BQZw0C'">
+<div class="mini">SL</div>
+<div class="text">𝗖𝗛𝗔𝗡𝗡𝗘𝗟 𝗪𝗛𝗔𝗧𝗦𝗔𝗣𝗣</div>
+</div>
+
+</div>
+</div>
+
+<div id="produkPage">
+
+<h2>━━〣 𝗡𝗲𝘄 𝗣𝗿𝗼𝗱𝘂𝗸 *TATAN*</h2>
+
+┏━━━━━━━━━━━━━━━━━
+┃ OPEN JASBUG
+┃ OPEN JASBEN
+┃ OPEN JASSNTK
+┃ OPEN MURBUG
+┃ OPEN MURBEN
+┃ OPEN PENEL
+┃ OPEN APK BUG
+┃ OPEN APK BEN
+┃ OPEN WEB SUNTIK
+┃ OPEN WEB JPM
+┃ OPEN JASA WEB
+┗━━━━━━━━━━━━━━━━
+
+┏━━━━━━
+┃ 𝗠𝗜𝗡𝗔𝗧 👇
+┃ @tatancs0770
+┗━━━━━━━━━━━━━━━━
+
+𝗧𝗘𝗦𝗧𝗜 ⬇
+
+𝐚𝐝𝐚 𝐝𝐢 𝐬𝐚𝐦𝐚 𝐰𝐡𝐚𝐭𝐬𝐚𝐩𝐩
+𝐣𝐚𝐧𝐠𝐚𝐧 𝐥𝐮𝐩𝐚 𝐟𝐨𝐥𝐥𝐨𝐰 𝐭𝐢𝐤𝐭𝐨𝐤 𝐢𝐧𝐢 𝐲𝐚
+
+© tatan
+
+<button class="closeBtn" onclick="closeProduk()">Tutup</button>
+
+</div>
+
+
+<script>
+function showProduk(){
+document.getElementById("mainPage").style.display="none";
+document.getElementById("produkPage").style.display="block";
+}
+
+function closeProduk(){
+document.getElementById("produkPage").style.display="none";
+document.getElementById("mainPage").style.display="block";
+}
+
+/* MATRIX TATAN */
+(function(){
+const c=document.getElementById("matrixCanvas");
+const ctx=c.getContext("2d");
+
+let w,h,font=18,cols,drops;
+
+const chars=[
+"t","a","t","a","n",
+"s","l","e","b","e","w"
+];
+
+function resize(){
+w=c.width=innerWidth;
+h=c.height=innerHeight;
+cols=Math.floor(w/font);
+drops=new Array(cols).fill(1);
+}
+
+function draw(){
+ctx.fillStyle="rgba(0,0,0,0.08)";
+ctx.fillRect(0,0,w,h);
+
+ctx.fillStyle="#00eaff";
+ctx.shadowBlur=15;
+ctx.shadowColor="#00eaff";
+ctx.font=font+"px monospace";
+
+for(let i=0;i<cols;i++){
+let text=chars[Math.floor(Math.random()*chars.length)];
+ctx.fillText(text,i*font,drops[i]*font);
+
+if(drops[i]*font>h && Math.random()>0.975){
+drops[i]=0;
+}
+drops[i]++;
+}
+}
+
+resize();
+setInterval(draw,40);
+addEventListener("resize",resize);
+})();
+
+/* SNOW */
+(function(){
+const c=document.getElementById("snowCanvas");
+const ctx=c.getContext("2d");
+let w,h,flakes=[];
+
+function resize(){
+w=c.width=innerWidth;
+h=c.height=innerHeight;
+}
+
+function setup(){
+resize();
+flakes=[];
+for(let i=0;i<100;i++){
+flakes.push({
+x:Math.random()*w,
+y:Math.random()*h,
+r:Math.random()*3+1,
+d:Math.random()*1.5+0.5
+});
+}
+}
+
+function draw(){
+ctx.clearRect(0,0,w,h);
+ctx.fillStyle="white";
+ctx.beginPath();
+
+for(let f of flakes){
+ctx.moveTo(f.x,f.y);
+ctx.arc(f.x,f.y,f.r,0,Math.PI*2);
+}
+ctx.fill();
+
+for(let f of flakes){
+f.y+=f.d;
+if(f.y>h){
+f.y=-5;
+f.x=Math.random()*w;
+}
+}
+}
+
+setup();
+setInterval(draw,33);
+addEventListener("resize",setup);
+})();
+</script>
+
+</body>
+</html>
